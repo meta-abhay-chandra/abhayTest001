@@ -1,0 +1,24 @@
+<template>
+    <label>c-team-List</label>
+   <div class="slds-box slds-size_large">
+      <lightning-card >        
+            <div class=" slds-form-element slds-form-element_horizontal">
+                <lightning-combobox label="Team:"  placeholder="Select Team" options={recordList} value= {teamValue} onchange={handleTeamChange} ></lightning-combobox>
+            </div> 
+            <div class="slds-scrollable slds-m-around_x-small" style="width: fit-content ; height: fit-content;">
+                <hr> 
+                <template if:true = {memberRecords} for:each={memberRecords} for:item="teamMemberRecord">
+                  
+                    <li key={teamMemberRecord.Id}>
+                        <p class="slds-p-horizontal_small slds-text-title_bold">Name: {teamMemberRecord.Name} </p>
+                        <p class="slds-p-horizontal_small slds-text-title_bold">Team: {teamMemberRecord.TeamName} </p>
+                        <p class="slds-p-horizontal_small slds-text-title_bold">Skills: {teamMemberRecord.Skills} </p>       
+                        <hr>
+                    </li>
+
+                </template>
+            </div>                        
+      </lightning-card>
+  </div>
+    
+</template>
