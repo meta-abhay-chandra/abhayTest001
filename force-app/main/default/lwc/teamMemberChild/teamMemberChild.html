@@ -1,0 +1,36 @@
+<template>
+   <label>c-member-skills</label>
+   <div class="slds-box slds-size_large">
+      <lightning-card  variant="narrow">
+          <div class="slds-form">
+              <div class="slds-form-element slds-form-element_horizontal lds-m-horizontal_x-small">
+                  <lightning-input type="text" value={nameValue} label="Name:" onchange={handleNameChange}></lightning-input>
+              </div>
+              <div class="slds-form-element slds-form-element_horizontal  lds-m-horizontal_x-small">
+                  <lightning-combobox label="Team:"  placeholder="Select Team" options={recordList} value= {teamValue} onchange={handleTeamChange} ></lightning-combobox>
+              </div>  
+              <div class="slds-form-element slds-form-element_horizontal lds-m-horizontal_x-small">
+                  <lightning-input type="text" value={skillValue} onchange={handleSkillChange} label="Skills:"></lightning-input>
+              </div>    
+              <div  class="slds-align_absolute-center">
+                <lightning-button label="Submittt" title="Create team member record" onclick={handleSubmitClick}  ></lightning-button>
+              </div>                
+          </div>
+      </lightning-card>
+  </div>
+<!--<div class="slds-form">
+    <label class="slds-form-element__label">"c-Member-skills"</label>
+    <div class="slds-form-element slds-form-element_horizontal">
+        <lightning-input type="text" label="Enter some text"></lightning-input>
+
+    </div>
+    <div class="slds-form-element slds-form-element_horizontal">
+        <label class="slds-form-element__label" for="horizontal-input-id-01">Skills:</label>
+        <div class="slds-form-element__control">
+            <input type="text" id="horizontal-input-id-02" class="slds-input" />
+        </div>
+    </div>
+         Drop down
+        
+</div>     -->
+</template>
